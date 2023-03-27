@@ -14,7 +14,6 @@
 .slider {
     width: 50vw;
     height: 50vh;
-    background-color: black;
     position: relative;
 }
 
@@ -24,6 +23,7 @@
 
 .item {
     height: 100%;
+    display: none;
 }
 
 .item img {
@@ -58,7 +58,7 @@
     background-color: rgb(128, 128, 128, 0.9);
 }
 
-.item .active {
+.item.active {
     display: block;
 }
 
