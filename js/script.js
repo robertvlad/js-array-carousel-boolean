@@ -7,13 +7,15 @@ const images_array = [
 ];
 
 let item_content = '';
+let item_thumb = '';
 
 for (let i = 0; i < images_array.length; i++) {
     item_content += `<div class="item"><img src="./img/${ images_array[i] }"></div>`;
-    
+    item_thumb += `<div class="thumb"><img src="./img/${ images_array[i] }"></div>`; 
 };
 
 const items_slider = document.querySelector('.item-slider').innerHTML = item_content;
+const items_thumbnails = document.querySelector('.item-thumbnails').innerHTML = item_thumb;
 
 const items = document.getElementsByClassName('item');
 console.log(items);
