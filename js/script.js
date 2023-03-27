@@ -33,7 +33,12 @@ next.addEventListener ('click', function() {
     items[item_active].classList.remove('active');
     circles[item_active].classList.remove('active');
 
-    item_active++;
+    if ( item_active === images_array.length-1 ) {
+        item_active = 0;
+    }
+    else {
+        item_active++;
+    };
 
     items[item_active].classList.add('active');
     circles[item_active].classList.add('active');
@@ -44,7 +49,12 @@ prev.addEventListener ('click', function() {
     items[item_active].classList.remove('active');
     circles[item_active].classList.remove('active');
 
-    item_active--;
+    if ( item_active === 0 ) {
+        item_active = images_array.length - 1;
+    }
+    else {
+        item_active--;
+    };
 
     items[item_active].classList.add('active');
     circles[item_active].classList.add('active');
