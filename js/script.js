@@ -18,14 +18,15 @@ const items_slider = document.querySelector('.item-slider').innerHTML = item_con
 const items_thumbnails = document.querySelector('.item-thumbnails').innerHTML = item_thumb;
 
 const items = document.getElementsByClassName('item');
-console.log(items);
+const circles = document.getElementsByClassName('circle');
+const thumb = document.getElementsByClassName('thumb');
+console.log(thumb);
+
 let item_active = 0;
 
 items[item_active].classList.add('active');
-
-const circles = document.getElementsByClassName('circle');
-
-circles[item_active].classList.add('active')
+circles[item_active].classList.add('active');
+thumb[item_active].classList.add('active');
 
 let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
@@ -34,6 +35,7 @@ next.addEventListener ('click', function() {
 
     items[item_active].classList.remove('active');
     circles[item_active].classList.remove('active');
+    thumb[item_active].classList.remove('active');
 
     if ( item_active === images_array.length-1 ) {
         item_active = 0;
@@ -44,12 +46,14 @@ next.addEventListener ('click', function() {
 
     items[item_active].classList.add('active');
     circles[item_active].classList.add('active');
+    thumb[item_active].classList.add('active');
 });
 
 prev.addEventListener ('click', function() {
 
     items[item_active].classList.remove('active');
     circles[item_active].classList.remove('active');
+    thumb[item_active].classList.remove('active');
 
     if ( item_active === 0 ) {
         item_active = images_array.length - 1;
@@ -60,6 +64,7 @@ prev.addEventListener ('click', function() {
 
     items[item_active].classList.add('active');
     circles[item_active].classList.add('active');
+    thumb[item_active].classList.add('active');
 });
 
 

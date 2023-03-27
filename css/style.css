@@ -90,3 +90,12 @@
 .thumb {
     height: 20%;
 }
+
+.thumb img {
+    background-color: black;
+    opacity: 0.5;
+}
+
+.thumb.active img {
+    opacity: 1;
+}
